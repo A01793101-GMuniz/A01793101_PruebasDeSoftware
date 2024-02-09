@@ -1,0 +1,4 @@
+			TOTAL
+TC3			165235.37
+
+Tiempo de ultima ejecucion:            0.01405

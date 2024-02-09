@@ -1,0 +1,4 @@
+			TOTAL
+TC2			166568.23
+
+Tiempo de ultima ejecucion:            0.01306
