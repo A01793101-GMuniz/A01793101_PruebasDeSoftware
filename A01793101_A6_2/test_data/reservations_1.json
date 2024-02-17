@@ -1,0 +1,26 @@
+[
+  {
+    "hotel_id": 1,
+    "num_habit": 1,
+    "in_date": "01-01-2024",
+    "out_date": "05-01-2024"
+  },
+  {
+    "hotel_id": 2,
+    "num_habit": 2,
+    "in_date": "01-01-2024",
+    "out_date": "05-01-2024"
+  },
+  {
+    "hotel_id": 2,
+    "num_habit": 3,
+    "in_date": "12-12-2024",
+    "out_date": "15-12-2024"
+  },
+  {
+    "hotel_id": 1,
+    "num_habit": 3,
+    "in_date": "13-02-2024",
+    "out_date": "20-02-2024"
+  }
+]

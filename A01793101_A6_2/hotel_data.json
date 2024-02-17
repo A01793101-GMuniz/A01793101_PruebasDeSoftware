@@ -1,0 +1,132 @@
+[
+    {
+        "hotel_id": 1,
+        "hotel_name": "Sheraton Plaza Inn",
+        "hotel_addr": "Av. Siempre Viva 785, Guadalajara Jalisco",
+        "habitaciones": [
+            {
+                "room_number": 1,
+                "tipo": "single",
+                "precio": 54.0,
+                "disponible": true
+            },
+            {
+                "room_number": 2,
+                "tipo": "double",
+                "precio": 64.0,
+                "disponible": true
+            },
+            {
+                "room_number": 3,
+                "tipo": "king",
+                "precio": 70.0,
+                "disponible": false
+            },
+            {
+                "room_number": 4,
+                "tipo": "single",
+                "precio": 54.0,
+                "disponible": false
+            },
+            {
+                "room_number": 5,
+                "tipo": "single",
+                "precio": 55.0,
+                "disponible": true
+            }
+        ]
+    },
+    {
+        "hotel_id": 2,
+        "hotel_name": "Hilton Inn Plaza",
+        "hotel_addr": "Lazaro Cardenaz 2545, Guadalajara Jalisco",
+        "habitaciones": [
+            {
+                "room_number": 1,
+                "tipo": "double",
+                "precio": 85.0,
+                "disponible": true
+            },
+            {
+                "room_number": 2,
+                "tipo": "double",
+                "precio": 85.0,
+                "disponible": true
+            },
+            {
+                "room_number": 3,
+                "tipo": "family",
+                "precio": 105.0,
+                "disponible": true
+            },
+            {
+                "room_number": 4,
+                "tipo": "suite",
+                "precio": 154.0,
+                "disponible": true
+            }
+        ]
+    },
+    {
+        "hotel_id": 4,
+        "hotel_name": "Hampton Inn",
+        "hotel_addr": "Calle Siempre Viva 785",
+        "habitaciones": [
+            {
+                "room_number": 1,
+                "tipo": "single",
+                "precio": 54.0,
+                "disponible": true
+            },
+            {
+                "room_number": 2,
+                "tipo": "double",
+                "precio": 64.0,
+                "disponible": false
+            },
+            {
+                "room_number": 3,
+                "tipo": "king",
+                "precio": 70.0,
+                "disponible": true
+            }
+        ]
+    },
+    {
+        "hotel_id": 5,
+        "hotel_name": "RIU GDL",
+        "hotel_addr": "Lazaro Cardenaz 2545, Guadalajara Jalisco",
+        "habitaciones": [
+            {
+                "room_number": 101,
+                "tipo": "double",
+                "precio": 45.0,
+                "disponible": false
+            },
+            {
+                "room_number": 102,
+                "tipo": "family",
+                "precio": 80.0,
+                "disponible": true
+            },
+            {
+                "room_number": 103,
+                "tipo": "double",
+                "precio": 45.0,
+                "disponible": true
+            },
+            {
+                "room_number": 201,
+                "tipo": "single",
+                "precio": 35.0,
+                "disponible": true
+            },
+            {
+                "room_number": 202,
+                "tipo": "suite",
+                "precio": 100.0,
+                "disponible": true
+            }
+        ]
+    }
+]

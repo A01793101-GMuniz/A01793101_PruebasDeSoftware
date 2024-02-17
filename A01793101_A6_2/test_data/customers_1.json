@@ -1,0 +1,27 @@
+[
+  {
+    "customer_name": "Jhon Doe",
+    "customer_email": "jhon_doe@mail.com",
+    "customer_phone": "3385412351"
+  },
+  {
+    "customer_name": "Felicia Sand",
+    "customer_email": "felicia234S_3d@gmail.com",
+    "customer_phone": "524136971"
+  },
+  {
+    "customer_name": "Richard Marx",
+    "customer_email": "exRchd782@hotmail.com",
+    "customer_phone": "1234567890"
+  },
+  {
+    "customer_name": "Peter Jam",
+    "customer_email": "itHam@mail.com",
+    "customer_phone": "9876543210"
+  },
+  {
+    "customer_name": "Octavious Maiz",
+    "customer_email": "theMaiz@mail.com",
+    "customer_phone": "8529637410"
+  }
+]
