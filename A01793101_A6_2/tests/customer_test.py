@@ -51,6 +51,7 @@ class CustomerTest(unittest.TestCase):
     def test_delete_customer(self):
         """Prueba la eliminacion de un customer por email y
         que no se encuentre en el archivo"""
+        print("\nBORRAR CLIENTE TEST:")
         email_to_delete = "itHam@mail.com"
         Customer.delete_customer(email_to_delete)
         customers_on_file = Customer.get_existing_data()
@@ -59,6 +60,15 @@ class CustomerTest(unittest.TestCase):
         self.assertTrue(email_to_delete not in customers_emails,
                         "Encontre el customer en el archivo de Customers,\
                             no fue eliminado")
+
+    def test_delete__non_existing_customer(self):
+        """Prueba la eliminacion de un customer
+        que no se encuentre en el archivo"""
+        print("\nBORRAR CLIENTE INEXISTENTE TEST:")
+        email_to_delete = "__NEC_MAIL__@mail.com"
+        was_deleted = Customer.delete_customer(email_to_delete)
+        self.assertFalse(was_deleted, f"El Cliente con correo: {email_to_delete}\
+                         SI existe en el archivo")
 
     def test_modify_customer(self):
         """Prueba la modificacion de un customer y

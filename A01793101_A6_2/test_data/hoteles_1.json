@@ -18,7 +18,7 @@
         "room_number": 4,
         "tipo": "single",
         "precio": 54.0,
-        "disponible": false
+        "disponible": true
       },
       { "room_number": 5, "tipo": "single", "precio": 55.0, "disponible": true }
     ],

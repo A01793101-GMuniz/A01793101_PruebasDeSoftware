@@ -45,18 +45,17 @@ class HotelTest(unittest.TestCase):
             with open(test_data_file, 'r', encoding="UTF-8") as archivo:
                 hoteles = json.load(archivo)
 
+        # Cada que se corran Hoteles test hay que limpiar Hoteles
+        # y reservaciones
         hotel_data_file = f"{os.getcwd()}\\hotel_data.json"
         if os.path.isfile(hotel_data_file):
             with open(hotel_data_file, 'r', encoding="UTF-8") as archivo:
-                existing_hotl = json.load(archivo)
-                if existing_hotl[0]["habitaciones"][2]["disponible"] is False:
-                    existing_hotl[0]["habitaciones"][2]["disponible"] = True
-                    
-                if existing_hotl[0]["habitaciones"][1]["disponible"]:
-                    existing_hotl[0]["habitaciones"][1]["disponible"] = False
+                archivo.close()
 
-                # Reset Valores para las pruebas
-                Hotel.save_to_file(existing_hotl)
+        reserv_file = f"{os.getcwd()}\\reservation_data.json"
+        if os.path.isfile(reserv_file):
+            with open(reserv_file, 'r', encoding="UTF-8") as archivo:
+                archivo.close()
 
         for hotel in hoteles:
             Hotel.create_hotel(hotel)
@@ -94,6 +93,14 @@ class HotelTest(unittest.TestCase):
                         "Encontre el hotel en el archivo de Hoteles,\
                          no fue eliminado")
         print(f"Hotel with ID {id_to_delete} deleted\n")
+
+    def test_delete_non_existing_hotel(self):
+        """Prueba la eliminacion de un hotel que no existe"""
+        print("\nBORRAR HOTEL INEXISTENTETEST\n")
+        id_to_delete = 12375869
+        was_deleted = Hotel.delete_hotel(id_to_delete)
+        self.assertFalse(was_deleted, f"El hotel con id {id_to_delete}\
+            SI existe")
 
     def test_modify_hotel(self):
         """Prueba la modificacion de un hotel y
@@ -147,7 +154,7 @@ class HotelTest(unittest.TestCase):
         """Prueba que reserva una habitacion del hotel y
         cambia su disponibilidad"""
         print("\nRESERVE A ROOM TEST\n")
-        room_number = 3
+        room_number = 4
         hotel_id = 1
 
         room_res_id = Hotel.reserve_room(hotel_id, room_number)
@@ -165,7 +172,7 @@ class HotelTest(unittest.TestCase):
         """Prueba que cancela una reserva de una habitacion del hotel y
         cambia su disponibilidad"""
         print("\nCANCEL A ROOM TEST\n")
-        room_number = 2
+        room_number = 4
         hotel_id = 1
 
         room_res_id = Hotel.cancel_room(hotel_id, room_number)
@@ -180,6 +187,16 @@ class HotelTest(unittest.TestCase):
                                 no disponible en el archivo")
         print(f"Reservacion en la habitacion {room_number}\
             del Hotel ID: {hotel_id} fue cancelada")
+
+    def test_cancel_room_disponible(self):
+        """Prueba cancelar una habitacion ya disponible"""
+        print("\nCANCELAR UNA HABITACION DISPONIBLE TEST:\n")
+        room_res_id = Hotel.cancel_room(1, 5)
+        self.assertEqual(room_res_id, -1, "Habitacion: 5 del hotel 1\
+            deberia estar disponible")
+        print("La habitacion 5 del Hotel ID: 1 ya estaba\
+            disponible")
+
 
 if __name__ == '__main__':
     unittest.main()

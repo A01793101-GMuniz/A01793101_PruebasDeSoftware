@@ -76,6 +76,8 @@ class Customer:
         if idx_to_delete >= 0:
             del existing_data[idx_to_delete]
             Customer.save_to_file(existing_data)
+            return True
+        return False
 
     @staticmethod
     def display_customer(searched_email):

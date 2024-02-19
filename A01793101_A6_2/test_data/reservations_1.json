@@ -1,25 +1,29 @@
 [
   {
-    "hotel_id": 1,
-    "num_habit": 1,
+    "hotel_name": "Sheraton Plaza Inn",
+    "room_number": 1,
+    "customer_email": "jhon_doe@mail.com",
     "in_date": "01-01-2024",
     "out_date": "05-01-2024"
   },
   {
-    "hotel_id": 2,
-    "num_habit": 2,
+    "hotel_name": "Hilton Inn Plaza",
+    "room_number": 2,
+    "customer_email": "felicia234S_3d@gmail.com",
     "in_date": "01-01-2024",
     "out_date": "05-01-2024"
   },
   {
-    "hotel_id": 2,
-    "num_habit": 3,
+    "hotel_name": "Hilton Inn Plaza",
+    "room_number": 3,
+    "customer_email": "jhon_doe@mail.com",
     "in_date": "12-12-2024",
     "out_date": "15-12-2024"
   },
   {
-    "hotel_id": 1,
-    "num_habit": 3,
+    "hotel_name": "Sheraton Plaza Inn",
+    "room_number": 3,
+    "customer_email": "exRchd782@hotmail.com",
     "in_date": "13-02-2024",
     "out_date": "20-02-2024"
   }

@@ -76,6 +76,8 @@ class Hotel:
         if idx_to_delete >= 0:
             del existing_data[idx_to_delete]
             Hotel.save_to_file(existing_data)
+            return True
+        return False
 
     @staticmethod
     def display_hotel(searched_id):
@@ -131,7 +133,7 @@ class Hotel:
             Hotel.save_to_file(hotels_on_file)
             return True
         return False
-    
+
     @staticmethod
     def reserve_room(hotel_id, room_number):
         """Funcion para reservar una habitacion en el hotel"""
@@ -142,14 +144,14 @@ class Hotel:
                 if habit["room_number"] == room_number:
                     if habit["disponible"]:
                         habit["disponible"] = False
-                        room_res_id = f"{str(randint(10000, 99999))}"
+                        room_res_id = randint(10000, 99999)
                         Hotel.save_to_file(hotels_on_file)
                         return room_res_id
             # Si no encontro la habitacion o no esta disponible
-            return -1        
+            return -1
         # Si no esta en el archivo
         return -2
-    
+
     @staticmethod
     def cancel_room(hotel_id, room_number):
         """Funcion para reservar una habitacion en el hotel"""
@@ -161,7 +163,7 @@ class Hotel:
                     if not habit["disponible"]:
                         habit["disponible"] = True
                         Hotel.save_to_file(hotels_on_file)
-                        return True
+                        return 0
                     # Si la habitacion  ya esta disponible
                     return -1
             # Si no encontro la habitacion
